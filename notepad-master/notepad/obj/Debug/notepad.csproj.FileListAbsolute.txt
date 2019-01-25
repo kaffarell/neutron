@@ -1,0 +1,20 @@
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Debug\notepad.exe.config
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Debug\notepad.exe
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Debug\notepad.pdb
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.csprojAssemblyReference.cache
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.Form1.resources
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.Properties.Resources.resources
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.csproj.GenerateResource.cache
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.exe
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Debug\notepad.pdb
+H:\Downloads\notepad-master\notepad-master\notepad\bin\Debug\notepad.exe.config
+H:\Downloads\notepad-master\notepad-master\notepad\bin\Debug\notepad.exe
+H:\Downloads\notepad-master\notepad-master\notepad\bin\Debug\notepad.pdb
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.csprojAssemblyReference.cache
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.Form1.resources
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.Properties.Resources.resources
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.csproj.GenerateResource.cache
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.csproj.CoreCompileInputs.cache
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.exe
+H:\Downloads\notepad-master\notepad-master\notepad\obj\Debug\notepad.pdb

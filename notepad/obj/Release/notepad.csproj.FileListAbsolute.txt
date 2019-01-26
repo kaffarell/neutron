@@ -1,0 +1,9 @@
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Release\notepad.exe.config
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Release\notepad.exe
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Release\notepad.pdb
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.Form1.resources
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.Properties.Resources.resources
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csproj.GenerateResource.cache
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.exe
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.pdb

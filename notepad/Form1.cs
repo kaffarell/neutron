@@ -52,11 +52,13 @@ namespace notepad
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (File.Exists(path))
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.Text = File.ReadAllText(path);
+                richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
             }
-            
         }
     }
+
 }
+

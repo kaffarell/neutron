@@ -7,5 +7,5 @@ Download the whole repository and execute:
 notepad/notepad/bin/release/notepad.exe
 
 
-Current version: 1.1
+Current version: v1.1
 Codename: "shadowy notepad"

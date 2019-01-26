@@ -7,3 +7,4 @@ C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepa
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.exe
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.pdb
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csprojAssemblyReference.cache

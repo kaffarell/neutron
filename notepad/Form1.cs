@@ -47,7 +47,7 @@ namespace notepad
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nversion 1.0 \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez");
+            MessageBox.Show("Author: Gabriel Goller\nv1.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez");
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)

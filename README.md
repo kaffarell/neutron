@@ -4,4 +4,8 @@ This is a primitive Editor called notepad which I made with
 C# and Windows Form in Visual Studio 2017
 
 Download the whole repository and execute:
-notepad/notepad/obj/Debug/notepad.exe
+notepad/notepad/bin/release/notepad.exe
+
+
+Current version: 1.1
+Codename: "shadowy notepad"

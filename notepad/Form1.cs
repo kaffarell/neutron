@@ -28,15 +28,16 @@ namespace notepad
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StreamWriter writer = new StreamWriter(path, true);
-
-            foreach (string l in richTextBox1.Lines)
+            SaveFileDialog dialog = new SaveFileDialog()
             {
-                writer.WriteLine(l);
+                Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
+            };
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(dialog.FileName, richTextBox1.Text);
             }
 
-            writer.Flush();
-            writer.Close();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

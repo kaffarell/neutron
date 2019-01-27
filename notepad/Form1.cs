@@ -23,31 +23,27 @@ namespace notepad
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            
+
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog()
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog()
             {
                 Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
             };
 
-            if (dialog.ShowDialog() == DialogResult.OK)
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(dialog.FileName, richTextBox1.Text);
+                File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
             }
-
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            File.Delete(path);
-        }
+    }
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nv1.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez");
+            MessageBox.Show("Author: Gabriel Goller\nv1.1.0.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +53,12 @@ namespace notepad
             {
                 richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
             }
+ 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0); 
         }
     }
 

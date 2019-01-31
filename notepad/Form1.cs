@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
+
 
 namespace notepad
 {
@@ -23,9 +25,10 @@ namespace notepad
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-
+            
         }
 
+        
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -39,11 +42,13 @@ namespace notepad
             {
                 File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
             }
-    }
+
+           
+        }  
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nv1.1.0.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Author: Gabriel Goller\nv1.1.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +65,8 @@ namespace notepad
         {
             Environment.Exit(0); 
         }
+
+
     }
 
 }

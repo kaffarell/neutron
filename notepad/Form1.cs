@@ -40,7 +40,11 @@ namespace notepad
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
+                //File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
+
+                var path = directory;            //Text wird in Textdokument unter dem Pfad gespeichert    
+                StreamWriter writer = new StreamWriter(path);
+
             }
 
            
@@ -57,6 +61,7 @@ namespace notepad
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
+                directory = openFileDialog.InitialDirectory + openFileDialog.FileName;
             }
  
         }
@@ -66,8 +71,25 @@ namespace notepad
             Environment.Exit(0); 
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
+
+        public string directory { get; set; }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var path = directory;            //Text wird in Textdokument unter dem Pfad gespeichert    
+            StreamWriter writer = new StreamWriter(path);
+            string content = richTextBox1.Text;         // Text wird hinengeschrieben
+
+            writer.Write(content);
+            writer.Close();
+        }
     }
 
+
+   
 }
 

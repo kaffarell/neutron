@@ -15,9 +15,6 @@ namespace notepad
 {
     public partial class Form1 : Form
     {
-
-        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "text.txt");
-
         public Form1()
         {
             InitializeComponent();
@@ -31,28 +28,12 @@ namespace notepad
         
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            SaveFileDialog saveFileDialog = new SaveFileDialog()
-            {
-                Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
-            };
-
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                //File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
-
-                var path = directory;            //Text wird in Textdokument unter dem Pfad gespeichert    
-                StreamWriter writer = new StreamWriter(path);
-
-            }
-
-           
+            saveasFile();
         }  
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nv1.1.1 \"shadowy notepad\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,9 +57,18 @@ namespace notepad
 
         }
 
-        public string directory { get; set; }
-
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFile();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+            saveasFile();
+        }
+
+        public void saveFile()
         {
             var path = directory;            //Text wird in Textdokument unter dem Pfad gespeichert    
             StreamWriter writer = new StreamWriter(path);
@@ -87,6 +77,31 @@ namespace notepad
             writer.Write(content);
             writer.Close();
         }
+
+        public void saveasFile()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog()
+            {
+                Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
+                directory = saveFileDialog.InitialDirectory + saveFileDialog.FileName;
+            }
+        }
+
+        void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                saveFile();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        public string directory { get; set; }
     }
 
 

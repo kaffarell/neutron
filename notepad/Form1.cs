@@ -31,10 +31,7 @@ namespace notepad
             saveasFile();
         }  
 
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+       
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -43,8 +40,12 @@ namespace notepad
             {
                 richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
                 directory = openFileDialog.InitialDirectory + openFileDialog.FileName;
+                name_file = openFileDialog.FileName;
             }
- 
+
+            name_file = Path.GetFileName(name_file);
+            Form1.ActiveForm.Text = name_file + " - notepad";
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +63,11 @@ namespace notepad
             saveFile();
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Silas Demez", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
@@ -70,9 +76,9 @@ namespace notepad
 
         public void saveFile()
         {
-            var path = directory;            //Text wird in Textdokument unter dem Pfad gespeichert    
+            var path = directory;
             StreamWriter writer = new StreamWriter(path);
-            string content = richTextBox1.Text;         // Text wird hinengeschrieben
+            string content = richTextBox1.Text;         
 
             writer.Write(content);
             writer.Close();
@@ -80,6 +86,7 @@ namespace notepad
 
         public void saveasFile()
         {
+
             SaveFileDialog saveFileDialog = new SaveFileDialog()
             {
                 Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
@@ -89,7 +96,11 @@ namespace notepad
             {
                 File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
                 directory = saveFileDialog.InitialDirectory + saveFileDialog.FileName;
+                name_file = saveFileDialog.FileName;
             }
+
+            name_file = Path.GetFileName(name_file);
+            Form1.ActiveForm.Text = name_file + " - notepad";
         }
 
         void Form_KeyDown(object sender, KeyEventArgs e)
@@ -102,6 +113,9 @@ namespace notepad
         }
 
         public string directory { get; set; }
+
+        public string name_file { get; set; }
+
     }
 
 

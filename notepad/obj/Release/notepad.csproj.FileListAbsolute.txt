@@ -8,3 +8,13 @@ C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepa
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.exe
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.pdb
 C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csprojAssemblyReference.cache
+H:\Documents\notepad\notepad\bin\Release\notepad.exe.config
+H:\Documents\notepad\notepad\bin\Release\notepad.exe
+H:\Documents\notepad\notepad\bin\Release\notepad.pdb
+H:\Documents\notepad\notepad\obj\Release\notepad.csprojAssemblyReference.cache
+H:\Documents\notepad\notepad\obj\Release\notepad.Form1.resources
+H:\Documents\notepad\notepad\obj\Release\notepad.Properties.Resources.resources
+H:\Documents\notepad\notepad\obj\Release\notepad.csproj.GenerateResource.cache
+H:\Documents\notepad\notepad\obj\Release\notepad.csproj.CoreCompileInputs.cache
+H:\Documents\notepad\notepad\obj\Release\notepad.exe
+H:\Documents\notepad\notepad\obj\Release\notepad.pdb

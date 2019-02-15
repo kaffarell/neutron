@@ -18,6 +18,9 @@ namespace notepad
         public Form1()
         {
             InitializeComponent();
+            richTextBox1.ShortcutsEnabled = true;
+            richTextBox1.Font = new Font("Product Sans", 8);
+            richTextBox1.Dock = DockStyle.Fill;
         }
 
         private void Form1_Load(object sender, System.EventArgs e)

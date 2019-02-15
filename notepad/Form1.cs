@@ -19,7 +19,7 @@ namespace notepad
         {
             InitializeComponent();
             richTextBox1.ShortcutsEnabled = true;
-            richTextBox1.Font = new Font("Product Sans", 8);
+            richTextBox1.Font = new Font("Product Sans", 10);
             richTextBox1.Dock = DockStyle.Fill;
         }
 

@@ -53,7 +53,17 @@ namespace notepad
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0); 
+            var path = directory;
+            if (path == "")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                saveFile();
+                Environment.Exit(0);
+            }
+            
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

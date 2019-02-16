@@ -61,7 +61,7 @@ namespace notepad
             else
             {
                 saveFile();
-                Environment.Exit(0);
+                Environment.Exit(0);            
             }
             
         }
@@ -76,10 +76,6 @@ namespace notepad
             saveFile();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -125,13 +121,33 @@ namespace notepad
             }
         }
 
+        private void fontToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FontDialog fd = new FontDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Font = fd.Font;
+            }
+        }
+
+        private void notepadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void documentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string text1;
+            text1 = "Name of Document: " + name_file + "\n" + "Full path: " + directory;
+            MessageBox.Show(text1, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public string directory { get; set; }
 
         public string name_file { get; set; }
-
     }
 
 
-   
+
 }
 

@@ -12,3 +12,5 @@ notepad/notepad/bin/release/notepad.exe
 
 Current version: v1.2.0
 Codename: "cosmic warrior"
+
+Feel Free to contribute🎓!

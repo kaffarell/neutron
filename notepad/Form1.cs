@@ -28,7 +28,41 @@ namespace notepad
             
         }
 
-        
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            string text = richTextBox1.Text;
+            foreach (var line in richTextBox1.Lines)
+            {
+                if (line.Contains("#"))
+                {
+                    int firstcharindex = richTextBox1.GetFirstCharIndexOfCurrentLine();
+
+                    int currentline = richTextBox1.GetLineFromCharIndex(firstcharindex);
+
+                    richTextBox1.Select(firstcharindex, 10);
+
+                    richTextBox1.SelectionColor = Color.Red;
+
+                    richTextBox1.DeselectAll();
+                    richTextBox1.Select(richTextBox1.Text.Length, 0);
+                }
+                else
+                {
+                    int firstcharindex = richTextBox1.GetFirstCharIndexOfCurrentLine();
+
+                    int currentline = richTextBox1.GetLineFromCharIndex(firstcharindex);
+
+                    richTextBox1.Select(firstcharindex, 10);
+
+                    richTextBox1.SelectionColor = Color.Black;
+
+                    richTextBox1.DeselectAll();
+                    richTextBox1.Select(richTextBox1.Text.Length, 0);
+                }
+            }
+        }
+
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveasFile();
@@ -54,21 +88,16 @@ namespace notepad
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var path = directory;
-            if (path == "")
+            if (path == null)
             {
                 Environment.Exit(0);
             }
             else
             {
                 saveFile();
-                Environment.Exit(0);            
+                Environment.Exit(-1);            
             }
             
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +174,7 @@ namespace notepad
         public string directory { get; set; }
 
         public string name_file { get; set; }
+
     }
 
 

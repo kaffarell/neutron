@@ -168,7 +168,16 @@ namespace notepad
         private void documentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string text1;
-            text1 = "Name of Document: " + name_file + "\n" + "Full path: " + directory;
+            string file_extension;
+
+            if (name_file != null)
+            {
+                file_extension = name_file.Substring(name_file.IndexOf("."));               
+            }else
+            {
+                file_extension = "";
+            }
+            text1 = "Name of Document: " + name_file + "\n" + "Full path: " + directory + "\n" + "File extension: " + file_extension;
             MessageBox.Show(text1, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -177,8 +186,5 @@ namespace notepad
         public string name_file { get; set; }
 
     }
-
-
-
 }
 

@@ -26,7 +26,7 @@ namespace notepad
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace notepad
             }
 
             name_file = Path.GetFileName(name_file);
-            Form1.ActiveForm.Text = name_file + " - notepad";
+            Form1.ActiveForm.Text = name_file + " - " + "notepad";
 
         }
 
@@ -103,7 +103,14 @@ namespace notepad
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFile();
+            if (directory == null)
+            {
+                saveasFile();
+            }
+            else
+            {
+                saveFile();
+            }
         }
 
 

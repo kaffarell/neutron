@@ -18,3 +18,6 @@ H:\Documents\notepad\notepad\obj\Release\notepad.csproj.GenerateResource.cache
 H:\Documents\notepad\notepad\obj\Release\notepad.csproj.CoreCompileInputs.cache
 H:\Documents\notepad\notepad\obj\Release\notepad.exe
 H:\Documents\notepad\notepad\obj\Release\notepad.pdb
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Release\WebDriver.dll
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\bin\Release\WebDriver.xml
+C:\Users\Gabriel Goller\Desktop\informatik\c#\notepad\notepad\obj\Release\notepad.csproj.CopyComplete

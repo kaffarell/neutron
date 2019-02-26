@@ -43,6 +43,7 @@
             this.documentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,7 +126,8 @@
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.notepadToolStripMenuItem,
-            this.documentToolStripMenuItem});
+            this.documentToolStripMenuItem,
+            this.updateToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.aboutToolStripMenuItem.Text = "about";
@@ -133,14 +135,14 @@
             // notepadToolStripMenuItem
             // 
             this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
-            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.notepadToolStripMenuItem.Text = "notepad";
             this.notepadToolStripMenuItem.Click += new System.EventHandler(this.notepadToolStripMenuItem_Click);
             // 
             // documentToolStripMenuItem
             // 
             this.documentToolStripMenuItem.Name = "documentToolStripMenuItem";
-            this.documentToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.documentToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.documentToolStripMenuItem.Text = "Document";
             this.documentToolStripMenuItem.Click += new System.EventHandler(this.documentToolStripMenuItem_Click);
             // 
@@ -160,6 +162,13 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 2;
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -197,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }
 

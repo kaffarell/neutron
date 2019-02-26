@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Net;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 
 
 namespace notepad
@@ -149,15 +152,6 @@ namespace notepad
             Form1.ActiveForm.Text = name_file + " - notepad";
         }
 
-        void Form_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control && e.KeyCode == Keys.S)
-            {
-                saveFile();
-                e.SuppressKeyPress = true;
-            }
-        }
-
         private void fontToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
@@ -192,6 +186,28 @@ namespace notepad
 
         public string name_file { get; set; }
 
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string downloadPath = @"C:\Users\Gabriel Goller\Desktop\Neuer Ordner\";
+
+            
+
+            var parameters = new FirefoxOptions();
+            parameters.AddArgument("--headless");
+
+            FirefoxOptions options = new FirefoxOptions();
+            options.SetPreference("browser.download.folderList", 2);
+            options.SetPreference("browser.download.manager.showWhenStarting", false);
+            options.SetPreference("browser.download.dir", downloadPath);
+            options.SetPreference("browser.helperApps.neverAsk.saveToDisk", "kaffarell/notepad/archive/master.zip");
+
+            IWebDriver browser = new FirefoxDriver(options);
+
+            browser.Navigate().GoToUrl("https://github.com/kaffarell/notepad/archive/master.zip");
+
+
+
+        }
     }
 }
 

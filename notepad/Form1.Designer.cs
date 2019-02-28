@@ -43,7 +43,8 @@
             this.documentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateInBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateWithGitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +128,8 @@
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.notepadToolStripMenuItem,
             this.documentToolStripMenuItem,
-            this.updateToolStripMenuItem});
+            this.updateInBrowserToolStripMenuItem,
+            this.updateWithGitToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.aboutToolStripMenuItem.Text = "about";
@@ -163,12 +165,19 @@
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 2;
             // 
-            // updateToolStripMenuItem
+            // updateInBrowserToolStripMenuItem
             // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            this.updateInBrowserToolStripMenuItem.Name = "updateInBrowserToolStripMenuItem";
+            this.updateInBrowserToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.updateInBrowserToolStripMenuItem.Text = "update in browser";
+            this.updateInBrowserToolStripMenuItem.Click += new System.EventHandler(this.updateInBrowserToolStripMenuItem_Click);
+            // 
+            // updateWithGitToolStripMenuItem
+            // 
+            this.updateWithGitToolStripMenuItem.Name = "updateWithGitToolStripMenuItem";
+            this.updateWithGitToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.updateWithGitToolStripMenuItem.Text = "update with git";
+            this.updateWithGitToolStripMenuItem.Click += new System.EventHandler(this.updateWithGitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -206,7 +215,8 @@
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateInBrowserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateWithGitToolStripMenuItem;
     }
 }
 

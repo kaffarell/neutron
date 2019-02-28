@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Net;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using System.Diagnostics;
 
 
 namespace notepad
@@ -29,6 +30,27 @@ namespace notepad
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
+            string path3 = @AppDomain.CurrentDomain.BaseDirectory + "first_time_shortcut.txt";
+            if (File.Exists(path3))
+            {
+                string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); ;
+                string linkName = "notepad";
+
+                using (StreamWriter writer = new StreamWriter(deskDir + "\\" + linkName + ".url"))
+                {
+                    string app = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                     writer.WriteLine("[InternetShortcut]");
+                     writer.WriteLine("URL=file:///" + app);
+                     writer.WriteLine("IconIndex=0");
+                     string icon = app.Replace('\\', '/');
+                     writer.WriteLine("IconFile=" + icon);
+                     writer.Flush();
+                }
+
+                File.Delete(path3);
+                
+            }
+            
 
         }
 
@@ -186,11 +208,11 @@ namespace notepad
 
         public string name_file { get; set; }
 
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void updateInBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string downloadPath = @"C:\Users\Gabriel Goller\Desktop\Neuer Ordner\";
+            string downloadPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); ;
 
-            
+
 
             var parameters = new FirefoxOptions();
             parameters.AddArgument("--headless");
@@ -207,6 +229,21 @@ namespace notepad
 
 
 
+        }
+
+        private void updateWithGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process proc = null;
+            string batDir = string.Format(@AppDomain.CurrentDomain.BaseDirectory);
+            proc = new Process();
+            proc.StartInfo.WorkingDirectory = batDir;
+            proc.StartInfo.FileName = "update.bat";
+            proc.StartInfo.CreateNoWindow = false;
+            proc.Start();
+            proc.WaitForExit();
+            MessageBox.Show("Updater executed, restart notepad!!");
+          
+            
         }
     }
 }

@@ -11,7 +11,7 @@ notepad/notepad/bin/debug/notepad.exe
 ```
 after that you will find a shortcut on Desktop.
 
-Current version: v1.2.0
+Current version: v1.3.0
 Codename: "cosmic warrior"
 
 Feel Free to contribute🎓!

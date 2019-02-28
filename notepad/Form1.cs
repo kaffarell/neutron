@@ -31,7 +31,8 @@ namespace notepad
         private void Form1_Load(object sender, System.EventArgs e)
         {
             string path3 = @AppDomain.CurrentDomain.BaseDirectory + "first_time_shortcut.txt";
-            if (File.Exists(path3))
+            string text = File.ReadAllText(path3);
+            if (File.Exists(path3) && (text != "0"))
             {
                 string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); ;
                 string linkName = "notepad";
@@ -46,9 +47,8 @@ namespace notepad
                      writer.WriteLine("IconFile=" + icon);
                      writer.Flush();
                 }
-
-                File.Delete(path3);
-                
+                text = "0";
+                File.WriteAllText(path3, text);
             }
             
 

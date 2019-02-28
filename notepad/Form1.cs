@@ -185,7 +185,7 @@ namespace notepad
 
         private void notepadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nv1.2.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Author: Gabriel Goller\nv1.3.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void documentToolStripMenuItem_Click(object sender, EventArgs e)

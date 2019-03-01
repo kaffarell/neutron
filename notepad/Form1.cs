@@ -56,6 +56,15 @@ namespace notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+            this.CheckKeyword("while", Color.OrangeRed, 0);
+            this.CheckKeyword("for", Color.OrangeRed, 0);
+            this.CheckKeyword("if", Color.Orange, 0);
+            this.CheckKeyword("else", Color.Orange, 0);
+            this.CheckKeyword("int", Color.Blue, 0);
+            this.CheckKeyword("string", Color.Blue, 0);
+            this.CheckKeyword("double", Color.Blue, 0);
+            this.CheckKeyword("var", Color.Blue, 0);
+            this.CheckKeyword("null", Color.DarkBlue, 0);
 
             string text = richTextBox1.Text;
             foreach (var line in richTextBox1.Lines)
@@ -72,6 +81,18 @@ namespace notepad
 
                     richTextBox1.DeselectAll();
                     richTextBox1.Select(richTextBox1.Text.Length, 0);
+                }else if (line.Contains("//"))
+                {
+                    int firstcharindex = richTextBox1.GetFirstCharIndexOfCurrentLine();
+
+                    int currentline = richTextBox1.GetLineFromCharIndex(firstcharindex);
+
+                    richTextBox1.Select(firstcharindex, 10);
+
+                    richTextBox1.SelectionColor = Color.Green;
+
+                    richTextBox1.DeselectAll();
+                    richTextBox1.Select(richTextBox1.Text.Length, 0);
                 }
                 else
                 {
@@ -85,6 +106,23 @@ namespace notepad
 
                     richTextBox1.DeselectAll();
                     richTextBox1.Select(richTextBox1.Text.Length, 0);
+                }
+            }
+        }
+
+        private void CheckKeyword(string word, Color color, int startIndex)
+        {
+            if (this.richTextBox1.Text.Contains(word))
+            {
+                int index = -1;
+                int selectStart = this.richTextBox1.SelectionStart;
+
+                while ((index = this.richTextBox1.Text.IndexOf(word, (index + 1))) != -1)
+                {
+                    this.richTextBox1.Select((index + startIndex), word.Length);
+                    this.richTextBox1.SelectionColor = color;
+                    this.richTextBox1.Select(selectStart, 0);
+                    this.richTextBox1.SelectionColor = Color.Black;
                 }
             }
         }

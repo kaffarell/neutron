@@ -58,8 +58,14 @@ namespace notepad
         {
             this.CheckKeyword("while", Color.OrangeRed, 0);
             this.CheckKeyword("for", Color.OrangeRed, 0);
-            this.CheckKeyword("if", Color.Orange, 0);
-            this.CheckKeyword("else", Color.Orange, 0);
+            this.CheckKeyword("if", Color.DarkOrange, 0);
+            this.CheckKeyword("echo", Color.DarkOrange, 0);
+            this.CheckKeyword("pause", Color.DarkOrange, 0);
+            this.CheckKeyword("@echo", Color.DarkOrange, 0);
+            this.CheckKeyword("nul", Color.DarkOrange, 0);
+            this.CheckKeyword("rmdir", Color.DarkOrange, 0);
+            this.CheckKeyword("cd", Color.DarkOrange, 0);
+            this.CheckKeyword("else", Color.DarkOrange, 0);
             this.CheckKeyword("int", Color.Blue, 0);
             this.CheckKeyword("string", Color.Blue, 0);
             this.CheckKeyword("double", Color.Blue, 0);

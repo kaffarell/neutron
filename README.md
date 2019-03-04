@@ -1,6 +1,7 @@
-# notepad
+# neutron
 
-![alt text](https://github.com/kaffarell/neutron/blob/master/images/neutron_logo.png =250x250)
+![neutron_logo](https://user-images.githubusercontent.com/42062381/53720507-3b59c700-3e61-11e9-8e56-b7bc6417ce93.png)
+
 
 This is a light and simple code Editor called neutron which I made with
 C# and Windows Form in Visual Studio 2017

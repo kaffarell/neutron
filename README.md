@@ -1,6 +1,7 @@
 # neutron
 
-![neutron_logo](https://user-images.githubusercontent.com/42062381/53720507-3b59c700-3e61-11e9-8e56-b7bc6417ce93.png)
+![neutron_logo](https://user-images.githubusercontent.com/42062381/53960827-8d138300-40e7-11e9-80e0-61ebe294e943.png)
+
 
 
 This is a light and simple code Editor called neutron which I made with

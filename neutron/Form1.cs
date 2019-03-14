@@ -36,12 +36,13 @@ namespace notepad
                 string linkName = "neutron";
                 string batDir = string.Format(@AppDomain.CurrentDomain.BaseDirectory);
 
+                //make link at Desktop
                 WshShell shell = new WshShell();
                 IWshShortcut link = (IWshShortcut)shell.CreateShortcut(deskDir + "\\" + linkName + ".lnk");
                 link.TargetPath = batDir + "\\neutron.exe";
                 link.Save();
 
-                text = "0";
+                text = "0";     //set link to 0
                 System.IO.File.WriteAllText(path3, text);
 
             }
@@ -51,85 +52,8 @@ namespace notepad
 
         private void fastColoredTextBox1_TextChanged(object sender, EventArgs e)
         {
-            
-        //    this.CheckKeyword("while", Color.OrangeRed, 0);
-        //    this.CheckKeyword("true", Color.OrangeRed, 0);
-        //    this.CheckKeyword("false", Color.OrangeRed, 0);
-        //    this.CheckKeyword("for", Color.OrangeRed, 0);
-        //    this.CheckKeyword("if", Color.DarkOrange, 0);
-        //    this.CheckKeyword("echo", Color.DarkOrange, 0);
-        //    this.CheckKeyword("pause", Color.DarkOrange, 0);
-        //    this.CheckKeyword("@echo", Color.DarkOrange, 0);
-        //    this.CheckKeyword("nul", Color.DarkOrange, 0);
-        //    this.CheckKeyword("rmdir", Color.DarkOrange, 0);
-        //    this.CheckKeyword("cd", Color.DarkOrange, 0);
-        //    this.CheckKeyword("else", Color.DarkOrange, 0);
-        //    this.CheckKeyword("int", Color.Blue, 0);
-        //    this.CheckKeyword("string", Color.Blue, 0);
-        //    this.CheckKeyword("double", Color.Blue, 0);
-        //    this.CheckKeyword("var", Color.Blue, 0);
-        //    this.CheckKeyword("null", Color.DarkBlue, 0);
-
-        //    string text = fastColoredTextBox1.Text;
-        //    foreach (var line in fastColoredTextBox1.Lines)
-        //    {
-        //        if (line.Contains("#"))
-        //        {
-        //            int firstcharindex = fastColoredTextBox1.GetFirstCharIndexOfCurrentLine();
-
-        //            int currentline = fastColoredTextBox1.GetLineFromCharIndex(firstcharindex);
-
-        //            fastColoredTextBox1.Select(firstcharindex, 10);
-
-        //            fastColoredTextBox1.SelectionColor = Color.Red;
-
-        //            fastColoredTextBox1.DeselectAll();
-        //            fastColoredTextBox1.Select(fastColoredTextBox1.Text.Length, 0);
-        //        }else if (line.Contains("//"))
-        //        {
-        //            int firstcharindex = fastColoredTextBox1.GetFirstCharIndexOfCurrentLine();
-
-        //            int currentline = fastColoredTextBox1.GetLineFromCharIndex(firstcharindex);
-
-        //            fastColoredTextBox1.Select(firstcharindex, 10);
-
-        //            fastColoredTextBox1.SelectionColor = Color.Green;
-
-        //            fastColoredTextBox1.DeselectAll();
-        //            fastColoredTextBox1.Select(fastColoredTextBox1.Text.Length, 0);
-        //        }
-        //        else
-        //        {
-        //            int firstcharindex = fastColoredTextBox1.GetFirstCharIndexOfCurrentLine();
-
-        //            int currentline = fastColoredTextBox1.GetLineFromCharIndex(firstcharindex);
-
-        //            fastColoredTextBox1.Select(firstcharindex, 10);
-
-        //            fastColoredTextBox1.SelectionColor = Color.Black;
-
-        //            fastColoredTextBox1.DeselectAll();
-        //            fastColoredTextBox1.Select(fastColoredTextBox1.Text.Length, 0);
-        //        }
-        //    }
+                
         }
-
-        //private void CheckKeyword(string word, Color color, int startIndex)
-        //{
-        //    if (this.fastColoredTextBox1.Text.Contains(word))
-        //    {
-        //        int index = -1;
-        //        int selectStart = this.fastColoredTextBox1.SelectionStart;
-
-        //        while ((index = this.fastColoredTextBox1.Text.IndexOf(word, (index + 1))) != -1)
-        //        {
-        //            this.fastColoredTextBox1.Select((index + startIndex), word.Length);
-        //            this.fastColoredTextBox1.SelectionColor = color;
-        //            this.fastColoredTextBox1.Select(selectStart, 0);
-        //            this.fastColoredTextBox1.SelectionColor = Color.Black;
-        //        }
-        //    }
-        //}
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -162,7 +86,7 @@ namespace notepad
             }
             else
             {
-                saveFile();
+                saveFile();         //when exit save 
                 Environment.Exit(-1);            
             }
             
@@ -251,13 +175,15 @@ namespace notepad
         {
             Process proc = null;
             string batDir = string.Format(@AppDomain.CurrentDomain.BaseDirectory);
-                
+            
+            //set link to 1 before update to make new link
             string path = batDir + "\\first_time_shortcut.txt";
             StreamWriter writer = new StreamWriter(path);
             string content = "1";
             writer.Write(content);
             writer.Close();
 
+            //start batch to make update
             proc = new Process();
             proc.StartInfo.WorkingDirectory = batDir;
             proc.StartInfo.FileName = "update.bat";

@@ -16,7 +16,7 @@ Download the whole repository and execute once:
 ```
 after that you will find a shortcut on the Desktop.
 
-Current version: v1.4.0
-Codename: "cosmic warrior"
-
 Feel Free to contribute🎓!
+
+![neutron_3](https://user-images.githubusercontent.com/42062381/54475895-34cf3600-47f7-11e9-8588-73d5cc523efc.png)
+

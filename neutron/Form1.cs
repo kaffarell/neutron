@@ -21,14 +21,14 @@ namespace notepad
         public Form1()
         {
             InitializeComponent();
-            fastColoredTextBox1.Font = new Font("Product Sans", 10);
+            fastColoredTextBox1.Font = new Font("Product Sans", 10); 
             fastColoredTextBox1.Dock = DockStyle.Fill;
             fastColoredTextBox1.AcceptsTab = true;
         }
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            string path3 = @AppDomain.CurrentDomain.BaseDirectory + "first_time_shortcut.txt";
+            string path3 = @AppDomain.CurrentDomain.BaseDirectory + "first_time_shortcut.txt";  //read link file
             string text = System.IO.File.ReadAllText(path3);
             if (System.IO.File.Exists(path3) && (text != "0"))
             {
@@ -42,7 +42,7 @@ namespace notepad
                 link.TargetPath = batDir + "\\neutron.exe";
                 link.Save();
 
-                text = "0";     //set link to 0
+                text = "0";     //set link file to 0
                 System.IO.File.WriteAllText(path3, text);
 
             }
@@ -52,7 +52,7 @@ namespace notepad
 
         private void fastColoredTextBox1_TextChanged(object sender, EventArgs e)
         {
-                
+              
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,15 +140,17 @@ namespace notepad
             Form1.ActiveForm.Text = name_file + " - neutron";
         }
 
-        private void fontToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void fontToolStripMenuItem_Click_1(object sender, EventArgs e)  //currently not working!!!
         {
             FontDialog fd = new FontDialog();
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 fastColoredTextBox1.Font = fd.Font;
             }
+            //the font size is changing but the font isnt
+            //problem is due fastcolored textbox
         }
-
+            
 
         private void documentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -197,7 +199,7 @@ namespace notepad
 
         private void neutronToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Gabriel Goller\nv1.4.0 \"cosmic warrior\" \nhttps://github.com/kaffarell\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Author: Gabriel Goller\nv1.4.0 \"cosmic warrior\" \nhttps://github.com/kaffarell/neutron\nBeta-Tester: Siloswagster, Gavaii", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -32,3 +32,4 @@ C:\Users\Gabriel Goller\Desktop\neutron\neutron\bin\Debug\FastColoredTextBox.dll
 C:\Users\Gabriel Goller\Desktop\neutron\neutron\bin\Debug\ScintillaNET.dll
 C:\Users\Gabriel Goller\Desktop\neutron\neutron\bin\Debug\FastColoredTextBox.xml
 C:\Users\Gabriel Goller\Desktop\neutron\neutron\bin\Debug\ScintillaNET.xml
+C:\Users\Gabriel Goller\Desktop\informatik\c#\neutron\neutron\obj\Debug\neutron.HTMLPreview.resources
